@@ -68,8 +68,8 @@ export default function Home() {
     <>
       <Header />
       <main className="min-h-screen max-w-400 mx-auto px-8 py-16">
-        <h1 className="text-5xl font-bold mb-6 text-center">React Code Review</h1>
-        <p className="mb-8 text-2xl text-center">A rule-based tool that analyzes React components, highlights common anti-patterns,<br /> and suggests safe refactors.</p>
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center">React Code Review</h1>
+        <p className="mb-8 text-lg md:text-2xl text-center">A rule-based tool that analyzes React components, highlights common anti-patterns,<br /> and suggests safe refactors.</p>
         <ExamplePicker onSelect={setCode} />
         <section className="mx-auto pt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
 
