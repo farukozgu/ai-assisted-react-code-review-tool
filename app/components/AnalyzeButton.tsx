@@ -25,6 +25,7 @@ export default function AnalyzeButton({
             bg-[#4B42DB]
             dark:bg-[#4B42DB]
             dark:text-white
+            hover:bg-[#3a32c8]
             px-5
             py-2.5
             text-md

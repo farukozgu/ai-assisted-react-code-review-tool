@@ -19,7 +19,7 @@ function Header() {
         <div>
             <header className="mx-auto px-8 py-5 border-b border-gray-100 shadow-xs bg-white dark:bg-[#1E1E1E] dark:border-0">
                 <div className='flex justify-between items-center'>
-                    <div className="text-xl font-bold text-black dark:text-white">AI Code Review</div>
+                    <div className="text-xl font-bold text-black dark:text-white">React Code Review</div>
                     <div className="text-sm text-gray-600 flex items-center">
                         <button
                             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
