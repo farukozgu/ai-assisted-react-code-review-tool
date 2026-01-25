@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Code Review Tool
 
-## Getting Started
+A lightweight, rule-based React code review tool that analyzes React components and highlights common mistakes, anti-patterns, and refactor opportunities — without relying on paid AI APIs.
 
-First, run the development server:
+This project is designed as a **developer-focused utility** to improve React code quality using deterministic rules and best practices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 What This Project Does
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Reviews pasted **React component code**
+- Detects **common React anti-patterns**
+- Explains **why an issue is a problem**
+- Provides **clear refactor suggestions**
+- Works fully **offline / rule-based**
+- No AI, no API keys, no external services
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔍 What Can Be Analyzed
 
-To learn more about Next.js, take a look at the following resources:
+The tool focuses on **high-impact React rules**, including:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### React Hooks
+- Missing `useEffect` dependency arrays
+- Incorrect or empty dependency arrays
+- Async functions used directly inside `useEffect`
+- Missing cleanup functions in side-effects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Code Quality
+- Inline function definitions inside JSX
+- Inline object literals causing unnecessary re-renders
+- Poor hook usage patterns
 
-## Deploy on Vercel
+### Best Practices
+- Side-effect isolation
+- Predictable component behavior
+- Maintainable and readable code structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ❌ What This Tool Does NOT Do
+
+- ❌ No AI-generated responses
+- ❌ No automatic code rewriting
+- ❌ No backend-heavy analysis
+- ❌ No lint replacement (this complements ESLint, not replaces it)
+
+---
+
+## 🧠 How It Works
+
+1. You paste a React component into the editor
+2. The code is parsed into an AST
+3. Predefined rules analyze the AST
+4. Issues are collected with:
+   - Description
+   - Why it’s a problem
+   - Refactor suggestion
+   - Severity level
+5. Results are shown in a structured output panel
+
+All analysis is **deterministic and transparent**.
+
+---
+
+## 🧱 Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **React**
+- **AST-based static analysis**
+- Tailwind CSS (UI)
+
+---
+
+## 🎯 Project Goal
+
+This project aims to:
+
+- Act as a **learning and review tool** for React developers
+- Encourage **clean, predictable React patterns**
+- Serve as a **portfolio-grade developer product**
+- Demonstrate how far **rule-based static analysis** can go without AI
+
+---
+
+## 📌 Future Improvements (Optional)
+
+- More React rules (memoization, keys, callbacks)
+- File-based analysis instead of paste-only
+- Exportable review reports
+- ESLint rule mapping
+- Code diff previews for refactors
+
+---
+
+## 🧑‍💻 Target Audience
+
+- React developers
+- Frontend engineers
+- Learners improving hook usage
+- Developers reviewing unfamiliar codebases
+
+---
+
+## 📄 License
+
+MIT License
