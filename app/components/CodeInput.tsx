@@ -41,7 +41,8 @@ useEffect(() => {
                     dark:bg-[#2e2d2d]
                     p-4
                     font-sans
-                    text-lg
+                    text-base
+                    md:text-lg
                     leading-relaxed
                     text-gray-900
                     dark:text-white

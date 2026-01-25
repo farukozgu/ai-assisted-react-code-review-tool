@@ -7,7 +7,10 @@
 }
 
 @layer base {
-  body {
+
+  html,
+  body,
+  * {
     font-family: var(--font-sans), system-ui, sans-serif;
   }
 }
