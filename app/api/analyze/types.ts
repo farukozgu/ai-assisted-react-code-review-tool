@@ -8,8 +8,6 @@ export type Issue = {
     title: string
     description: string
     severity: "low" | "medium" | "high"
-
-    // Rule’lar tarafından doldurulabilir
     explanation?: string
     refactorSuggestion?: string
     refactorSnippet?: RefactorSnippet

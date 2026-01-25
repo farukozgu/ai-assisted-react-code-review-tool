@@ -9,7 +9,6 @@ export function asyncUseEffectRule(
 ) {
     const callee = path.node.callee
 
-    // Sadece useEffect(...)
     if (!t.isIdentifier(callee) || callee.name !== "useEffect") {
         return
     }
@@ -19,7 +18,6 @@ export function asyncUseEffectRule(
 
     const effectCallback = args[0]
 
-    // useEffect(async () => { ... })
     if (
         t.isArrowFunctionExpression(effectCallback) &&
         effectCallback.async
